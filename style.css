@@ -1,3 +1,7 @@
+/* 
+CSS CODE.. I DON'T KNOW WHAT ELSE TO SAY. IT WORKS, BUT COULD BE IMPROVED
+*/
+
 body {
     display: flex;
     justify-content: center;
@@ -25,6 +29,8 @@ body {
 
 h1 {
     color: #f4f4f4;
+    transition: color 0.3s;
+
 }
 
 .counter {
@@ -35,10 +41,12 @@ h1 {
 
 p {
     color: #f0f0f0;
+    transition: color 0.3s;
+
 }
 
 .reset {
-    transition: 0.3s;
+    transition: background-color 0.3s;
     background-color: #b0b0b0;
     color: #141414;
     border: 2px solid rgb(120, 120, 120);

@@ -1,12 +1,16 @@
+// CONSTANT VARIABLES
+
 const lmbReset = document.getElementById('lmbReset');
 const rmbReset = document.getElementById('rmbReset');
 const themeToggle = document.getElementById('themeToggle');
 const container = document.getElementById('container');
 
+// CHANGING VARIABLES FOR COUNTERS AND LIGHT/DARK MODE
 let leftCount = 0;
 let rightCount = 0;
 let isLightMode = false;
 
+// DISABLES ADDING VALUES TO THE COUNTERS WHEN PRESSING BUTTONS 
 document.addEventListener('click', function (event) {
     if (event.button === 0 && event.target.tagName !== 'BUTTON') {
         leftCount++;
@@ -22,6 +26,7 @@ document.addEventListener('contextmenu', function (event) {
     }
 });
 
+// ADDS VALUES TO COUNTERS
 lmbReset.addEventListener('click', function () {
     leftCount = 0;
     document.getElementById('leftClickCount').innerText = leftCount;
@@ -32,8 +37,8 @@ rmbReset.addEventListener('click', function () {
     document.getElementById('rightClickCount').innerText = rightCount;
 });
 
+// LIGHT/DARK MODE LOGIC (this is extremely bad but whatever.. "Ff it ain't broke, don't fix it." - Wise Man)
 themeToggle.addEventListener('click', function() {
-
     if (!isLightMode) {
 
         /*
