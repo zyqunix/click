@@ -7,6 +7,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #2a2a2a;
     user-select: none;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
@@ -15,10 +16,11 @@ body {
     border-radius: 8px;
     padding: 30px 100px;
     box-shadow: 0 4px 10px rgba(16, 16, 16, 0.5);
+    transition: background-color 0.3s;
 }
 
 .container > * {
-    margin: 8px
+    margin: 8px;
 }
 
 h1 {
@@ -36,27 +38,52 @@ p {
 }
 
 .reset {
-    background-color: #2a2a2a;
-    color: #f0f0f0;
+    transition: 0.3s;
+    background-color: #b0b0b0;
+    color: #141414;
     border: 2px solid rgb(120, 120, 120);
     border-radius: 5px;
     padding: 5px;
     cursor: pointer;
     margin-top: 15px;
+    outline: none;
 }
 
-.reset:hover {
-    background-color: #383838;
-    border: 2px solid rgb(141, 141, 141);
+.theme-button {
+    background-color: rgb(0,0,0,0);
+    border-color: rgb(0,0,0,0);
+    transition: 0.3s;
+    color: #f0f0f0;
+    cursor: pointer;
+    outline: none;
+    margin-top: -5px;
+    z-index: 1000;
+    right: 20px;
+    top: 20px;
+}
+
+.theme-button:hover {
+    scale: 1.1;
+}
+
+.theme-button svg {
+    pointer-events: none;
+}
+
+.navBar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .github {
     text-align: center;
     height: 60px;
     width: 60px;
-    position: absolute;
-    top: 10px;
-    left: 10px;
     transition: 0.3s;
     user-select: none;
     pointer-events: none;
