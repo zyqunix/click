@@ -17,13 +17,17 @@ body {
     box-shadow: 0 4px 10px rgba(16, 16, 16, 0.5);
 }
 
+.container > * {
+    margin: 8px
+}
+
 h1 {
     color: #f4f4f4;
 }
 
 .counter {
     font-size: 24px;
-    margin: 20px 0;
+    margin: 40px 0;
     color: #ffffff;
 }
 
@@ -38,9 +42,35 @@ p {
     border-radius: 5px;
     padding: 5px;
     cursor: pointer;
+    margin-top: 15px;
 }
 
 .reset:hover {
     background-color: #383838;
     border: 2px solid rgb(141, 141, 141);
+}
+
+.github {
+    text-align: center;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transition: 0.3s;
+    user-select: none;
+    pointer-events: none;
+    z-index: 10;
+    color: #747474;
+    text-decoration: none;
+}
+
+.github:hover svg {
+    scale: 1.05;
+}
+
+.github svg {
+    pointer-events: all;
+    transition: 0.3s;
+    fill: #747474;
 }
