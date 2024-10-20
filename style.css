@@ -21,6 +21,8 @@ body {
     padding: 30px 100px;
     box-shadow: 0 4px 10px rgba(16, 16, 16, 0.5);
     transition: background-color 0.3s;
+    width: 300px;
+    max-width: 300px;
 }
 
 .container > * {
