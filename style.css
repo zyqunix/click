@@ -29,19 +29,13 @@ body {
     margin: 8px;
 }
 
-h1 {
-    color: #f4f4f4;
-    transition: color 0.3s;
-
-}
-
 .counter {
     font-size: 24px;
     margin: 40px 0;
     color: #ffffff;
 }
 
-p {
+p, h6, h1 {
     color: #f0f0f0;
     transition: color 0.3s;
 
@@ -57,6 +51,11 @@ p {
     cursor: pointer;
     margin-top: 15px;
     outline: none;
+    transition: border 0.3s;
+}
+
+.reset:hover {
+    border: 2px dashed #3c7855;
 }
 
 .theme-button {
