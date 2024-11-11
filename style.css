@@ -8,10 +8,23 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-family: Arial, sans-serif;
     background-color: #2a2a2a;
     user-select: none;
     transition: background-color 0.3s, color 0.3s;
+}
+
+* {
+    font-family: monospace;
+}
+
+button, p {
+    font-weight: 600;
+}
+
+.help {
+    color: #f0f0f0;
+    background: none;
+    border: none;
 }
 
 .container {
@@ -44,7 +57,7 @@ p, h6, h1 {
 .reset {
     transition: background-color 0.3s;
     background-color: #b0b0b0;
-    color: #141414;
+    color: #2a2a2a;
     border: 2px solid rgb(120, 120, 120);
     border-radius: 5px;
     padding: 5px;
@@ -58,6 +71,16 @@ p, h6, h1 {
     border: 2px dashed #3c7855;
 }
 
+.navBar > *:hover:not(.seperator) {
+    cursor: pointer;
+    scale: 1.05;
+}
+
+.navBar > * {
+    transition: scale 0.3s;
+
+}
+
 .theme-button {
     background-color: rgb(0,0,0,0);
     border-color: rgb(0,0,0,0);
@@ -69,6 +92,7 @@ p, h6, h1 {
     z-index: 1000;
     right: 20px;
     top: 20px;
+    margin-left: 5px !important;
 }
 
 .theme-button:hover {
@@ -81,18 +105,21 @@ p, h6, h1 {
 
 .navBar {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 0px;
+    left: 0px;
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.github {
+.navBar > * {
+    margin: 5px 1px 5px 10px;
+}
+
+.github,
+.web {
     text-align: center;
-    height: 60px;
-    width: 60px;
     transition: 0.3s;
     user-select: none;
     pointer-events: none;
@@ -101,12 +128,17 @@ p, h6, h1 {
     text-decoration: none;
 }
 
-.github:hover svg {
-    scale: 1.05;
-}
-
-.github svg {
+.github svg,
+.web svg {
     pointer-events: all;
     transition: 0.3s;
     fill: #747474;
+}
+
+.seperator {
+    height: 25px;
+    width: 2px;
+    border-radius: 10px;
+    background-color: #747474;
+
 }
